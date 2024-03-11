@@ -9,6 +9,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
+
+  @Value("${pro.path}")
+  private String proPath;
+  
   @Bean
   public TokenInterceptor TokenInterceptor() {
     return new TokenInterceptor();
@@ -27,6 +31,6 @@ public class WebConfig implements WebMvcConfigurer {
    */
   @Override
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    registry.addResourceHandler("/upload/**").addResourceLocations("classpath:/upload/");
+    registry.addResourceHandler("/upload/**").addResourceLocations("file:" + proPath);
   }
 }

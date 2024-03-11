@@ -20,16 +20,6 @@ public class CommonConst {
   /**
    * Token密钥
    */
-  public static final String TOKEN_KEY = "nest";
+  public static final String TOKEN_KEY = "yj";
   
-  /**
-   * 数据加密密钥
-   */
-  public static final String DATA_KEY = "CMYY-" + appName + "-BDLL";
-  
-  
-  /**
-   * 启用状态
-   */
-  public static final Boolean STATUS_ENABLE = true;
 }

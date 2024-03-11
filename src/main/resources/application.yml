@@ -19,6 +19,8 @@ spring:
   application:
     name: template
 
+pro:
+  path: D:\code\design\xxx\xxx\src\main\resources\upload\
 
 
 #mybatis-plus:
