@@ -1,14 +1,12 @@
 package com.design.common;
 
 import lombok.Data;
-
+import java.util.List;
 
 @Data
-public class PageResult {
-  private Object list;
+public class PageResult<T> {
+  private List<T> list;
   private Long total;
-  private Long page;
-  private Long pageSize;
 
   public static <T> PageResult<T> of(List<T> list, Long total){
     PageResult<T> pageResult = new PageResult<>();
@@ -17,12 +15,4 @@ public class PageResult {
     return pageResult;
   }
 
-  public static <T> PageResult<T> of(List<T> list, Long total, Long pageNum, Long pageSize){
-    PageResult<T> pageResult = new PageResult<>();
-    pageResult.setList(list);
-    pageResult.setTotal(total);
-    pageResult.setPage(pageNum);
-    pageResult.setPageSize(pageSize);
-    return pageResult;
-  }
 }
